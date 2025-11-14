@@ -1,5 +1,5 @@
 const sheetUrl =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQXfYx0A9EbttwdEODklcJe0pY3TGftGwwiqvqQswVczPXNPG3CS3Am7dYNXQVa_XSoJX3Pnd_B3AQI/pub?gid=0&single=true&output=csv";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQnFkwJaPwAh9cBB4F2NSHGiLJFiQZvTVtndsT445yT1atoaLPhZZ5MSSwhpS7KFa1Ast6SkUswsH4l/pub?output=csv";
 
 async function loadAssets() {
   const res = await fetch(sheetUrl);
@@ -14,9 +14,13 @@ async function loadAssets() {
   data.forEach((row, i) => {
     const no = i + 1;
     const kodeMaterial = row[1] || "-";
+    const kodeAsset = row[2] || "-";
+    const Capitalized On = row[3] || "-";
     const assetDesc = row[4] || "-";
     const location = row[5] || "-";
-    const kodeAsset = row[2] || "-";
+    const Merk = row[6] || "-";
+    const Type = row[7] || "-";
+    const Place = row[8] || "-";
 
     // QR code link (pakai API chart Google biar cepat)
     const detailUrl = `detail.html?kode=${encodeURIComponent(kodeAsset)}`;
@@ -35,5 +39,6 @@ async function loadAssets() {
 }
 
 loadAssets();
+
 
 
