@@ -1,5 +1,5 @@
 const sheetUrl =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQnFkwJaPwAh9cBB4F2NSHGiLJFiQZvTVtndsT445yT1atoaLPhZZ5MSSwhpS7KFa1Ast6SkUswsH4l/pub?output=csv";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQXfYx0A9EbttwdEODklcJe0pY3TGftGwwiqvqQswVczPXNPG3CS3Am7dYNXQVa_XSoJX3Pnd_B3AQI/pub?gid=0&single=true&output=csv";
 
 async function loadAssets() {
   const res = await fetch(sheetUrl);
@@ -39,6 +39,7 @@ async function loadAssets() {
 }
 
 loadAssets();
+
 
 
 
