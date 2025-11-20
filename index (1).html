@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daftar Alat Laboratorium | Virtu DigiLab</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .logo {
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+    }
+
+    .qr-box {
+      width: 90px;
+      height: 90px;
+      margin: auto;
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <img src="https://raw.githack.com/nurfaputra22/virtudigilab_equipment_web/main/logo_virtu.png"
+         alt="Virtu DigiLab Logo" class="logo" />
+    <h1>Daftar Alat Laboratorium</h1>
+  </header>
+  
+  <div class="controls">
+  <input type="text" id="searchInput" placeholder="Search...." />
+
+  <select id="locationFilter">
+    <option value="">All Location</option>
+  </select>
+</div>
+
+  <main>
+    <div class="table-container">
+      <table id="assetTable">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Serial Number</th>
+            <th>Asset Description</th>
+            <th>Location</th>
+            <th>QR Code</th>
+          </tr>
+        </thead>
+
+        <tbody id="assetGrid">
+          <tr>
+            <td colspan="5" class="loading">Memuat data...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Virtu DigiLab — Sistem Inventori Alat Laboratorium
+  </footer>
+
+  <!-- Library QR Code yg benar untuk daftar utama -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+  <!-- Script utama -->
+  <script src="script.js"></script>
+
+</body>
+</html>
