@@ -1,7 +1,7 @@
 // =========================
 // CONFIG
 // =========================
-const BASE_PATH = "https://nurfaputra22.github.io/virtudigilab_equipment_web/";
+const BASE_PATH = "https://ainulyaqin14.github.io/INFORMATION-DEVICE/";
 
 const NRC_URL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vQXfYx0A9EbttwdEODklcJe0pY3TGftGwwiqvqQswVczPXNPG3CS3Am7dYNXQVa_XSoJX3Pnd_B3AQI/pub?output=csv";
@@ -326,3 +326,4 @@ async function loadDetailPage() {
 // =========================
 if (document.getElementById("assetGrid")) loadAssets();
 if (document.getElementById("data-container")) loadDetailPage();
+
